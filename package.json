@@ -1,0 +1,19 @@
+{
+  "name": "detailed_respawn_rep",
+  "version": "0.0.1",
+  "description": "A mod for The Binding of Isaac: Repentance",
+  "keywords": [
+    "isaac",
+    "mod",
+    "rebirth",
+    "afterbirth",
+    "repentance"
+  ],
+  "license": "GPL-3.0",
+  "dependencies": {
+    "isaac-typescript-definitions": "^1.0.331",
+    "isaacscript": "^1.1.72",
+    "isaacscript-common": "^1.0.596",
+    "isaacscript-lint": "^1.0.79"
+  }
+}
