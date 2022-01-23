@@ -1,8 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-  <name>!Detailed Respawn</name>
-  <directory>detailed_respawn_rep</directory>
-  <description>detailed_respawn_rep is a currently a work in progress.</description>
-  <version>1.0</version>
-  <visibility/>
+    <name>REP | Detailed Respawn</name>
+    <directory>detailed_respawn_rep</directory>
+    <id>2729252633</id>
+    <description>
+    Detailed Respawn updated for repentance! For the ab+ version go to https://steamcommunity.com/sharedfiles/filedetails/?id=2094114939
+
+    [url=https://github.com/SweetMNM/detailed-respawn-rep]Source Code[/url]
+
+    Detailed Respawn lets you know what respawns you have in the correct order they will activate. It also shows you how many lives you have left from 9 lives and the chances of respawning for respawns based on chance (Guppy's Collar and Broken Ankh).
+
+    You can customize the mod using [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2487535818]Mod Config Menu Continued[/url].
+
+    [h1][b]Features:[/b][/h1]
+    - Alternative icons showing the character instead of the item icon (Dark Judas instead of Judas' Shadow)
+    - Only show next respawn (Only show the next respawn that is going to activate to avoid HUD clutter)
+    - Option to hide the Detailed Respawn hud on curse of the unknown (if that's your thing)
+    - Option to hide additional text like 9 lives amount and Guppy's Collar chances
+    - Customize the icons and text size
+    - Control the transperancy of the hud
+
+    [h1][b]Planned Features:[/b][/h1]
+    - co-op support, currently it will only show for 1 player :(
+    - If any modder made respawn items and is interested in adding support for them contact me
+    - Anything you want! Just ask in the comments
+    </description>
+    <version>1.1</version>
+    <visibility>Private</visibility>
+    <tag id="Lua"/>
+    <tag id="Items"/>
+    <tag id="Tweaks"/>
+    <tag id="Graphics"/>
 </metadata>
