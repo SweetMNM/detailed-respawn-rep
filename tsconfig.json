@@ -20,5 +20,6 @@
     "luaTarget": "5.3",
     "luaBundle": "./mod/main.lua", // Will bundle all output Lua files into a single file
     "luaBundleEntry": "./src/bundleEntry.ts", // This invokes the "main.ts" file
+    // "luaLibImport": "inline"
   },
 }

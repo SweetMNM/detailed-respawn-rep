@@ -4,7 +4,7 @@ module.exports = {
   extends: [
     // The linter base is the IsaacScript mod config
     // https://github.com/IsaacScript/eslint-config-isaacscript/blob/main/mod.js
-    "eslint-config-isaacscript/mod",
+    "eslint-config-isaacscript/mod"
   ],
 
   parserOptions: {
@@ -12,12 +12,13 @@ module.exports = {
     // things to lint correctly
     // We do not point this at "./tsconfig.json" because certain files (such at this file) should be
     // linted but not included in the actual project output
-    project: "./tsconfig.eslint.json",
+    project: "./tsconfig.eslint.json"
   },
 
   // We modify the linting rules from the base for some specific things
   // (listed in alphabetical order)
   rules: {
     // Insert changed or disabled rules here, if necessary
-  },
+    "@typescript-eslint/no-non-null-assertion": "off"
+  }
 };
