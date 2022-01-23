@@ -14,15 +14,15 @@
 
     [h1][b]Features:[/b][/h1]
     - Alternative icons showing the character instead of the item icon (Dark Judas instead of Judas' Shadow)
-    - Only show next respawn (Only show the next respawn that is going to activate to avoid HUD clutter)
+    - Option to only show next respawn (Only show the next respawn that is going to activate to avoid HUD clutter)
     - Option to hide the Detailed Respawn hud on curse of the unknown (if that's your thing)
     - Option to hide additional text like 9 lives amount and Guppy's Collar chances
     - Customize the icons and text size
     - Control the transperancy of the hud
+    - Mods with custom respawns can add compatibility with Detailed Respawn
 
     [h1][b]Planned Features:[/b][/h1]
     - co-op support, currently it will only show for 1 player :(
-    - If any modder made respawn items and is interested in adding support for them contact me
     - Anything you want! Just ask in the comments
     </description>
     <version>1.2</version>
