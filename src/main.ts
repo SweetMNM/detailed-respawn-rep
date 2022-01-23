@@ -15,6 +15,7 @@ import { onPEffectUpdate } from "./callbacks/onPEffectUpdate";
 import { onRender } from "./callbacks/onRender";
 import { config } from "./config";
 import { refreshNormalizedRespawns } from "./data/normalizedIRespawns";
+import { AddCustomRespawn, RespawnPosition } from "./helpers/moddedRespawns";
 import "./modConfigMenu";
 
 export function main() {
@@ -47,3 +48,10 @@ export function main() {
 
   Isaac.DebugString("detailed respawn initialized.");
 }
+
+declare let DetailedRespawnGlobalAPI: unknown;
+
+DetailedRespawnGlobalAPI = {
+  AddCustomRespawn,
+  RespawnPosition
+};
