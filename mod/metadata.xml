@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-    <name>REP | Detailed Respawn</name>
+    <name>!Detailed Respawn [REP]</name>
     <directory>detailed_respawn_rep</directory>
     <id>2729252633</id>
     <description>
@@ -25,7 +25,7 @@
     - If any modder made respawn items and is interested in adding support for them contact me
     - Anything you want! Just ask in the comments
     </description>
-    <version>1.1</version>
+    <version>1.2</version>
     <visibility>Private</visibility>
     <tag id="Lua"/>
     <tag id="Items"/>
