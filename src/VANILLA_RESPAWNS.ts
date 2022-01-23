@@ -2,9 +2,20 @@ import { Respawn } from "./types";
 
 export const VANILLA_RESPAWNS: Respawn[] = [
   {
+    name: "Soul Of Lazarus",
+    gfx: "gfx/detailedrespawn/Soul Of Lazarus.png",
+    positionModifier: Vector(3, 0),
+    condition(player) {
+      return (
+        player.GetCard(0) === Card.CARD_SOUL_LAZARUS ||
+        player.GetCard(1) === Card.CARD_SOUL_LAZARUS
+      );
+    }
+  },
+  {
     name: "1up!",
     itemId: CollectibleType.COLLECTIBLE_1UP,
-    positionModifier: Vector(2, 0),
+    positionModifier: Vector(0.5, 0),
     increaseCount: true
   },
   {
@@ -24,6 +35,11 @@ export const VANILLA_RESPAWNS: Respawn[] = [
     additionalText: (player) =>
       `x${player.GetData().DetailedRespawnDeadCatCount}`,
     increaseCount: false // This is not a mistake
+  },
+  {
+    name: "Inner Child",
+    itemId: CollectibleType.COLLECTIBLE_INNER_CHILD,
+    increaseCount: true
   },
   {
     name: "Lazarus' Rags",

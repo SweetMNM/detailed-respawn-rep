@@ -24,7 +24,10 @@ export function calculateHeartsUiOffset(player: EntityPlayer) {
   if (player.HasCollectible(CollectibleType.COLLECTIBLE_GUPPYS_COLLAR)) {
     respawnCountText += "?";
   }
-  const respawnCountTextModifier = Vector(respawnCountText.length * 5, 0);
+  const respawnCountTextModifier =
+    player.GetExtraLives() !== 0
+      ? Vector(respawnCountText.length * 5, 0)
+      : Vector(0, 0);
 
   return heartCountModifier.add(respawnCountTextModifier);
 }
