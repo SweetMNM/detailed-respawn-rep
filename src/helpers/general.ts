@@ -24,3 +24,16 @@ export function shouldRunModStuff() {
     Game().GetHUD().IsVisible()
   );
 }
+
+export function getCardCountForPlayer(player: EntityPlayer, card: number) {
+  let count = 0;
+
+  if (player.GetCard(0) === card) {
+    count++;
+  }
+  if (player.GetCard(1) === card) {
+    count++;
+  }
+
+  return count;
+}

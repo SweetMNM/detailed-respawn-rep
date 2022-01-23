@@ -1,3 +1,4 @@
+import { getCardCountForPlayer } from "./helpers/general";
 import { Respawn } from "./types";
 
 export const VANILLA_RESPAWNS: Respawn[] = [
@@ -5,11 +6,10 @@ export const VANILLA_RESPAWNS: Respawn[] = [
     name: "Soul Of Lazarus",
     gfx: "gfx/detailedrespawn/Soul Of Lazarus.png",
     positionModifier: Vector(3, 0),
+    additionalText: (player) =>
+      getCardCountForPlayer(player, Card.CARD_SOUL_LAZARUS) === 2 ? "x2" : "",
     condition(player) {
-      return (
-        player.GetCard(0) === Card.CARD_SOUL_LAZARUS ||
-        player.GetCard(1) === Card.CARD_SOUL_LAZARUS
-      );
+      return getCardCountForPlayer(player, Card.CARD_SOUL_LAZARUS) > 0;
     }
   },
   {
