@@ -1,3 +1,4 @@
+import { config } from "../config";
 import { NormalizedRespawn } from "../types";
 
 // export const RespawnPosition = {
@@ -26,6 +27,14 @@ export function updateRespawnsForPlayer(
 
 export function getRespawnsForPlayer(player: EntityPlayer) {
   return player.GetData().DetailedRespawnRespawnInfo as NormalizedRespawn[];
+}
+
+export function shouldRunModStuff() {
+  return (
+    config.enabled &&
+    !(config.hideOnCurseOfTheUnknown && hasCurseOfTheUnknown()) &&
+    Game().GetHUD().IsVisible()
+  );
 }
 
 // DetailedRespawn.AddCustomRespawn = function (respawnObject, respawnPosition) {

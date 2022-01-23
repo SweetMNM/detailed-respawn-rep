@@ -1,9 +1,6 @@
 import { config } from "../config";
 import { getNormalizedRespawns } from "../data/normalizedIRespawns";
-import {
-  hasCurseOfTheUnknown,
-  updateRespawnsForPlayer
-} from "../helpers/general";
+import { shouldRunModStuff, updateRespawnsForPlayer } from "../helpers/general";
 import { NormalizedRespawn } from "../types";
 
 function filterRespawnsForPlayer(player: EntityPlayer) {
@@ -23,10 +20,7 @@ function filterRespawnsForPlayer(player: EntityPlayer) {
 }
 
 export function onPEffectUpdate(player: EntityPlayer) {
-  if (
-    !config.enabled ||
-    (config.hideOnCurseOfTheUnknown && hasCurseOfTheUnknown())
-  ) {
+  if (!shouldRunModStuff()) {
     return;
   }
 

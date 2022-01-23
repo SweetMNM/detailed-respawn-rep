@@ -1,12 +1,9 @@
 import { config } from "../config";
-import { getRespawnsForPlayer, hasCurseOfTheUnknown } from "../helpers/general";
+import { getRespawnsForPlayer, shouldRunModStuff } from "../helpers/general";
 import { calculateHeartsUiOffset, hudOffset } from "../helpers/rendering";
 
 export function onRender() {
-  if (
-    !config.enabled ||
-    (config.hideOnCurseOfTheUnknown && hasCurseOfTheUnknown())
-  ) {
+  if (!shouldRunModStuff()) {
     return;
   }
 
