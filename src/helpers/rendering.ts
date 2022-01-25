@@ -1,7 +1,11 @@
 import { hasCurseOfTheUnknown } from "./general";
 
 function getTotalHeartsDisplayed(player: EntityPlayer) {
-  return player.GetEffectiveMaxHearts() + player.GetSoulHearts();
+  return (
+    player.GetEffectiveMaxHearts() +
+    player.GetSoulHearts() +
+    player.GetBrokenHearts() * 2
+  );
 }
 
 function getDisplayedHeartsColumns(player: EntityPlayer) {
