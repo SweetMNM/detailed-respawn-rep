@@ -15,10 +15,9 @@ export function calculateHeartsUiOffset(player: EntityPlayer) {
     return Vector(0, 0);
   }
 
-  const heartCountModifier = Vector(
-    12 * (getDisplayedHeartsColumns(player) - 1),
-    0
-  );
+  const totalHeartColumns = getDisplayedHeartsColumns(player);
+
+  const heartCountModifier = Vector(12 * (totalHeartColumns - 1), 0);
 
   let respawnCountText = `x${player.GetExtraLives()}`;
   if (player.HasCollectible(CollectibleType.COLLECTIBLE_GUPPYS_COLLAR)) {
@@ -29,7 +28,17 @@ export function calculateHeartsUiOffset(player: EntityPlayer) {
       ? Vector(respawnCountText.length * 5, 0)
       : Vector(0, 0);
 
-  return heartCountModifier.add(respawnCountTextModifier);
+  const holyMantleModifier =
+    totalHeartColumns < 6 &&
+    player
+      .GetEffects()
+      .HasCollectibleEffect(CollectibleType.COLLECTIBLE_HOLY_MANTLE)
+      ? Vector(12, 0)
+      : Vector(0, 0);
+
+  return heartCountModifier
+    .add(respawnCountTextModifier)
+    .add(holyMantleModifier);
 }
 
 export function hudOffset() {

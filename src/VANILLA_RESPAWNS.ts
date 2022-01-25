@@ -88,4 +88,3 @@ export const VANILLA_RESPAWNS: Respawn[] = [
     hasAltSprite: true
   }
 ];
-// Isaac.GetPlayer(0):RemoveCollectible(CollectibleType.COLLECTIBLE_DEAD_CAT); Isaac.GetPlayer(0):AddCollectible(CollectibleType.COLLECTIBLE_DEAD_CAT);
