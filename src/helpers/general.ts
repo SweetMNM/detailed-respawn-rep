@@ -14,7 +14,9 @@ export function updateRespawnsForPlayer(
 }
 
 export function getRespawnsForPlayer(player: EntityPlayer) {
-  return player.GetData().DetailedRespawnRespawnInfo as NormalizedRespawn[];
+  return player.GetData().DetailedRespawnRespawnInfo as
+    | NormalizedRespawn[]
+    | undefined;
 }
 
 export function shouldRunModStuff() {
